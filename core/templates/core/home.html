@@ -1,5 +1,33 @@
 {% extends "base/base.html" %}
+{% load permission_tags %}
+
+
 
 {% block content %}
-    <h1>Você está na HOME</h1>
+    {% if user|has_role:'estoque'%}
+        <div class="card text-center">
+            <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-primary">Sistema Web Leinertex</h5>
+            <p class="card-text">Seja bem-vindo, {{ request.user.username }}!</p>
+            <p class="card-text">Clique no botão abaixo, para acessar o sistema!</p>
+            <div>
+                <a href="./men25" class="btn btn-warning mt-2">Acessar Estoque</a>
+            </div>
+            </div>
+        </div>
+      {% endif %}
+
+    {% if user|has_role:'comercial'%}
+      <div class="card text-center">
+          <div class="card-body d-flex flex-column">
+          <h5 class="card-title text-primary">Sistema Web Leinertex</h5>
+          <p class="card-text">Seja bem-vindo, {{ request.user.username }}!</p>
+          <p class="card-text">Clique no botão abaixo, para acessar o sistema!</p>
+          <div>
+              <a href="./men25" class="btn btn-warning mt-2">Acessar Comercial</a>
+          </div>
+          </div>
+      </div>
+    {% endif %}
+    <!-- <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link">Logout</li> -->
 {% endblock %}

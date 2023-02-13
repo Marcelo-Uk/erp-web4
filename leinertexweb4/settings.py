@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'core',
+    'rolepermissions'
 ]
 
 MIDDLEWARE = [
@@ -130,3 +131,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGOUT_REDIRECT_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
+
+ROLEPERMISSIONS_MODULE = "leinertexweb4.roles"

@@ -3,14 +3,14 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background: #7abecc !important;
+    background: #003ca6 !important;
 }
 
 .user_card {
     width: 350px;
     margin-top: auto;
     margin-bottom: auto;
-    background: #74cfbf;
+    background: #1c55b8;
     position: relative;
     display: flex;
     justify-content: center;
@@ -34,8 +34,8 @@ html {
 
 .login_btn {
     width: 100%;
-    background: #33ccff !important;
-    color: white !important;
+    background: #f7ba5b !important;
+    color: rgb(255, 255, 255) !important;
 }
 .login_btn:focus {
     box-shadow: none !important;
