@@ -1,0 +1,142 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ccc;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #012c48;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.button-exit {
+    padding: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    width: 100px;
+    color: white;
+}
+    
+.button-exit:hover {
+    background-color: rgb(255, 139, 119);
+    color: white;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #0a4275;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+  
+.grid-container {
+  grid-template-areas:
+      "item1 . item2 item3 item4 item4"
+      "item5 item5 item6 item7 item4 item4"
+      "item5 item5 item8 item9 item4 item4"
+      "item5 item5 item10 item10 item4 item4"
+      "item11 item11 item12 item12 item13 item13"; */
+  gap: 10px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  padding: 10px;
+  color: rgb(107, 107, 107);
+}
+
+.panel {
+    grid-area: item1;
+    background-color: white;
+    font-size: 12px;
+    border-radius: 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.panel-1 {
+    grid-area: item1;
+    background-color: #7aafff;
+    color: #325892;
+    font-size: 16px;
+    place-items: center;
+
+}
+
+.panel-2 {
+    grid-area: item2;
+    text-align: center;
+}
+
+.panel-3 {
+    grid-area: item3;
+    text-align: center;
+}
+  
+.panel-4 {
+    grid-area: item4;
+    text-align: center;
+}
+
+.panel-5 {
+    grid-area: item5;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.panel-6 {
+    grid-area: item6;
+    text-align: center;
+}
+
+.panel-7 {
+    grid-area: item7;
+    text-align: center;
+}
+
+.panel-8 {
+    grid-area: item8;
+    text-align: center;
+}
+
+.panel-9 {
+    grid-area: item9;
+    text-align: center;
+}
+
+.panel-10 {
+    grid-area: item10;
+    text-align: center;
+}
+
+.panel-11 {
+    grid-area: item11;
+    text-align: center;
+}
+    
+.panel-12 {
+    grid-area: item12;
+    text-align: center;
+}
+
+.panel-13 {
+    grid-area: item13;
+    text-align: center;
+}

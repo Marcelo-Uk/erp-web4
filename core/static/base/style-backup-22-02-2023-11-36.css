@@ -1,0 +1,302 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #ccc;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #012c48;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.button-exit {
+    padding: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    width: 100px;
+    color: white;
+}
+    
+.button-exit:hover {
+    background-color: rgb(255, 139, 119);
+    color: white;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #0a4275;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "item1 item1 item2 item2 item2 item2 item3 item3"
+        "item4 item4 item2 item2 item2 item2 item3 item3"
+        "item4 item4 item5 item5 item6 item6 item3 item3"
+        "item4 item4 item7 item7 item8 item8 item3 item3"
+        "item9 item9 item10 item10 item11 item11 item12 item12";
+    gap: 10px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 10px;
+    color: rgb(107, 107, 107);
+    height: 78vh;
+}
+  
+.panel {
+    grid-area: item1;
+    background-color: white;
+    font-size: 12px;
+    border-radius: 10px;
+    font-family: 'Oswald', sans-serif;
+
+}
+  
+.panel-1 {
+    grid-area: item1;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+.panel-2 {
+    grid-area: item2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+    
+.panel-3 {
+    grid-area: item3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #9B59B6;
+}
+  
+.panel-4 {
+    grid-area: item4;
+    font-size: 22px;
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+}
+  
+.panel-5 {
+    grid-area: item5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #e5f6ff;
+    color: #2b70ff;
+}
+  
+.panel-6 {
+    grid-area: item6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f6f3ff;
+    color: #5d48b8;
+
+}
+  
+.panel-7 {
+    grid-area: item7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #e2f6e9;
+    color: #358e51;
+}
+  
+.panel-8 {
+    grid-area: item8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff0e9;
+    color: #ff5228;
+}
+  
+.panel-9 {
+    grid-area: item9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 32px;
+}
+  
+.panel-10 {
+    grid-area: item10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+      
+.panel-11 {
+    grid-area: item11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+  
+.panel-12 {
+    grid-area: item12;
+}
+
+.fil-goiania {
+    color: white;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../imgs/filial-1.jpg');
+    background-size: cover;
+}
+
+.fil-belem {
+    color: white;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../imgs/filial-2.jpg');
+    background-size: cover;
+}
+
+.fil-saopaulo {
+    color: white;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../imgs/filial-3.jpg');
+    background-size: cover;
+}
+
+/* Calendário */
+.wrapper{
+    width: 450px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  }
+  .wrapper .header{
+    display: flex;
+    align-items: center;
+    padding: 25px 30px 10px;
+    justify-content: space-between;
+  }
+  .header .icons{
+    display: flex;
+  }
+  .header .icons span{
+    height: 38px;
+    width: 38px;
+    margin: 0 1px;
+    cursor: pointer;
+    color: #878787;
+    text-align: center;
+    line-height: 38px;
+    font-size: 1.9rem;
+    user-select: none;
+    border-radius: 50%;
+  }
+  .icons span:last-child{
+    margin-right: -10px;
+  }
+  .header .icons span:hover{
+    background: #f2f2f2;
+  }
+  .header .current-date{
+    font-size: 1.45rem;
+    font-weight: 500;
+  }
+  .calendar{
+    padding: 20px;
+  }
+  .calendar ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+  }
+  .calendar .days{
+    margin-bottom: 20px;
+  }
+  .calendar li{
+    color: #333;
+    width: calc(100% / 7);
+    font-size: 1.07rem;
+  }
+  .calendar .weeks li{
+    font-weight: 500;
+    cursor: default;
+  }
+  .calendar .days li{
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+  }
+  .days li.inactive{
+    color: #aaa;
+  }
+  .days li.active{
+    color: #fff;
+  }
+  .days li::before{
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .days li.active::before{
+    background: #9B59B6;
+  }
+  .days li:not(.active):hover::before{
+    background: #f2f2f2;
+  }
+/* Fim Calendário */

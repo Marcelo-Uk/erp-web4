@@ -1,0 +1,31 @@
+|  
+
+.\activate
+
+Developer Process
+
+1 - Configurar para cada usuário acessar uma página diferente - OK
+2 - Adicionar botão logout - OK
+3 - Finalizar layout basico 
+        Preciso decifrar o que será mostrado pra cada usuário, usando template tags
+4 - Criar layout das páginas (menus)
+5 - Criar todos os menus do Estoque
+
+
+Calendário HTML/CSS/JS
+https://www.codingnepalweb.com/dynamic-calendar-html-css-javascript/
+
+Usuarios Cadastrados na base
+Auzeni
+Fabio
+Geovana
+Hanna
+marcelo-uk (admin)
+Matheus
+Nickerson
+
+Teste: Geovana - Mulher - Goiânia - Comercial - Emotion
+Teste: Matheus - Homem - Goiânia - Retira - Emotion
+Teste: Hanna - Mulher - Belém - Comercial - Emotion
+
+

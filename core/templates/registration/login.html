@@ -23,9 +23,9 @@
 <body>
 	<div class="container h-100">
 		<div class="d-flex justify-content-center h-100">
-			<div class="user_card">
+			<div class="user_card w-50">
 				<div class="d-flex justify-content-center">
-          <h5 id="form-title">Sistema Web - Leinertex</h5>
+          			<img src="https://leinertex.com.br/2022/wp-content/uploads/2022/07/leinertex_branca-horizontal.png" class="mt-2 mb-2">
 				</div>
 				<div class="d-flex justify-content-center form_container">
 					<form method="POST">
@@ -45,15 +45,15 @@
 
 						<div class="d-flex justify-content-center mt-3 login_container">
 				 			<input class="btn login_btn" type="submit" value="Login">
-				   	</div>
-					{% for k, v in form.errors.items %}
-              			{{ v }}
-            		{% endfor %}
+				   		</div>
+						{% for k, v in form.errors.items %}
+              				{{ v }}
+            			{% endfor %}
 					</form>
 				</div>
-            <div class="d-flex justify-content-center mt-3 text-white">
-                <p>Powered by: Casa Tecnologia</p>
-            </div>
+				<div class="d-flex justify-content-center mt-3 text-white">
+					<p style="font-size: 12px" >Powered by Casa Tecnologia 2023</p>
+				</div>
 			</div>
 		</div>
 	</div>

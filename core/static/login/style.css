@@ -1,16 +1,15 @@
-body,
-html {
+body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background: #003ca6 !important;
+    background-color: #012c48 !important;
 }
 
 .user_card {
     width: 350px;
     margin-top: auto;
     margin-bottom: auto;
-    background: #1c55b8;
+    background-color: #1c55b8;
     position: relative;
     display: flex;
     justify-content: center;
@@ -25,6 +24,10 @@ html {
 
 .form_container {
     margin-top: 20px;
+}
+
+.casa_text {
+    font-size: 2px; 
 }
 
 #form-title{

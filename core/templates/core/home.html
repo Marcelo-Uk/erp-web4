@@ -1,33 +1,189 @@
 {% extends "base/base.html" %}
 {% load permission_tags %}
-
-
+{% load auth_extras %}
+{% load static %}
 
 {% block content %}
-    {% if user|has_role:'estoque'%}
-        <div class="card text-center">
-            <div class="card-body d-flex flex-column">
-            <h5 class="card-title text-primary">Sistema Web Leinertex</h5>
-            <p class="card-text">Seja bem-vindo, {{ request.user.username }}!</p>
-            <p class="card-text">Clique no botão abaixo, para acessar o sistema!</p>
-            <div>
-                <a href="./men25" class="btn btn-warning mt-2">Acessar Estoque</a>
+    <!-- Início do Grupo Comercial -->
+    {% if request.user|has_group:"Comercial"%}
+        {% if request.user|has_group:"Mulher"%}
+            <div class="panel panel-1" style="background-color: #ff7ad7; color: #92326d;">
+                <span class="fw-bold">Painel de Controle</span>
+                <span>Departamento Comercial</span>
             </div>
+        {% elif request.user|has_group:"Homem"%}
+            <div class="panel panel-1" style="background-color: #7aafff; color: #325892;">
+                <span class="fw-bold">Painel de Controle</span>
+                <span>Departamento Comercial</span>
             </div>
-        </div>
-      {% endif %}
+        {% endif %}
+            <div class="panel panel-2">Painel 2</div>
+            <div class="panel panel-3">
+                <div class="wrapper">
+                    <div class="header">
+                      <p class="current-date"></p>
+                      <div class="icons">
+                        <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                        <span id="next" class="material-symbols-rounded">chevron_right</span>
+                      </div>
+                    </div class="header">
+                    <div class="calendar">
+                      <ul class="weeks">
+                        <li>Dom</li>
+                        <li>Seg</li>
+                        <li>Ter</li>
+                        <li>Qua</li>
+                        <li>Qui</li>
+                        <li>Sex</li>
+                        <li>Sáb</li>
+                      </ul>
+                      <ul class="days"></ul>
+                    </div>
+                  </div>
+            </div>
+            <div class="panel panel-4">
+                    <span><hr></span>
+                {% if request.user|has_group:"Mulher"%}
+                    <span class="fs-1">Olá, {{ request.user.username }}! 🙂🌹</span>
+                {% elif request.user|has_group:"Homem"%}
+                    <span class="fs-1">Olá, {{ request.user.username }}! 😎</span> 
+                {% endif %}
+                    <span><hr></span>
+                    <div class="card text-center">
+                        {% if request.user|has_group:"Mulher"%}
+                            <div class="card-header">
+                                Seja bem-vinda!
+                            </div>
+                        {% elif request.user|has_group:"Homem"%}
+                            <div class="card-header">
+                                Seja bem-vindo!
+                            </div>
+                        {% endif %}
 
-    {% if user|has_role:'comercial'%}
-      <div class="card text-center">
-          <div class="card-body d-flex flex-column">
-          <h5 class="card-title text-primary">Sistema Web Leinertex</h5>
-          <p class="card-text">Seja bem-vindo, {{ request.user.username }}!</p>
-          <p class="card-text">Clique no botão abaixo, para acessar o sistema!</p>
-          <div>
-              <a href="./men25" class="btn btn-warning mt-2">Acessar Comercial</a>
-          </div>
-          </div>
-      </div>
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">
+                              Clique no link abaixo para acessar <br>
+                              o Sistema Web Leinertex.
+                            </p>
+                            <a href="#" class="btn btn-warning">Entrar</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="panel panel-5">Painel 5</div>
+            <div class="panel panel-6">Painel 6</div>
+            <div class="panel panel-7">Painel 7</div>
+            <div class="panel panel-8">Painel 8</div>
+            <div class="panel panel-9">{{data}}</div>
+            <div class="panel panel-10">Painel 10</div>
+            <div class="panel panel-11">Painel 11</div>
+            <div class="panel panel-12">
+                {% if request.user|has_group:"Goiania"%}
+                    <div id="fil-goiania" class="filial filial-goiania">
+                        <div class="filial-text">Filial 1 - Goiânia</div>
+                    </div>
+                {% elif request.user|has_group:"Belem"%}
+                    <div id="fil-belem" class="filial filial-belem">
+                        <div class="filial-text">Filial 12 - Belém</div>
+                    </div>
+                {% elif request.user|has_group:"Sao Paulo"%}
+                    <div id="fil-saopaulo" class="filial filial-saopaulo">
+                        <div class="filial-text">Filial 13 - Sao Paulo</div>
+                    </div>
+            {% endif %}  
+            </div>      
     {% endif %}
-    <!-- <li class="nav-item"><a href="{% url 'logout' %}" class="nav-link">Logout</li> -->
+<!-- Fim do Grupo Comercial -->
+
+<!-- Início do Grupo Produção -->
+    {% if request.user|has_group:"Producao"%}
+        {% if request.user|has_group:"Mulher"%}
+            <div class="panel panel-1" style="background-color: #ff7ad7; color: #92326d;">
+                <span class="fw-bold">Painel de Controle</span>
+                <span>Departamento Produção</span>
+            </div>
+        {% elif request.user|has_group:"Homem"%}
+            <div class="panel panel-1" style="background-color: #7aafff; color: #325892;">
+                <span class="fw-bold">Painel de Controle</span>
+                <span>Departamento Produção</span>
+            </div>
+        {% endif %}
+            <div class="panel panel-2">Painel 2</div>
+            <div class="panel panel-3">
+                <div class="wrapper">
+                    <div class="header">
+                      <p class="current-date"></p>
+                      <div class="icons">
+                        <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                        <span id="next" class="material-symbols-rounded">chevron_right</span>
+                      </div>
+                    </div class="header">
+                    <div class="calendar">
+                      <ul class="weeks">
+                        <li>Dom</li>
+                        <li>Seg</li>
+                        <li>Ter</li>
+                        <li>Qua</li>
+                        <li>Qui</li>
+                        <li>Sex</li>
+                        <li>Sáb</li>
+                      </ul>
+                      <ul class="days"></ul>
+                    </div>
+                  </div>
+            </div>
+            <div class="panel panel-4">
+                    <span><hr></span>
+                {% if request.user|has_group:"Mulher"%}
+                    <span class="fs-1">Olá, {{ request.user.username }}! 🙂🌹</span>
+                {% elif request.user|has_group:"Homem"%}
+                    <span class="fs-1">Olá, {{ request.user.username }}! 😎</span> 
+                {% endif %}
+                    <span><hr></span>
+                    <div class="card text-center">
+                        {% if request.user|has_group:"Mulher"%}
+                            <div class="card-header">
+                                Seja bem-vinda!
+                            </div>
+                        {% elif request.user|has_group:"Homem"%}
+                            <div class="card-header">
+                                Seja bem-vindo!
+                            </div>
+                        {% endif %}
+
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">
+                              Clique no link abaixo para acessar <br>
+                              o Sistema Web Leinertex.
+                            </p>
+                            <a href="#" class="btn btn-warning">Entrar</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="panel panel-5">Painel 5</div>
+            <div class="panel panel-6">Painel 6</div>
+            <div class="panel panel-7">Painel 7</div>
+            <div class="panel panel-8">Painel 8</div>
+            <div class="panel panel-9">{{data}}</div>
+            <div class="panel panel-10">Painel 10</div>
+            <div class="panel panel-11">Painel 11</div>
+            <div class="panel panel-12">
+                {% if request.user|has_group:"Goiania"%}
+                    <div id="fil-goiania" class="filial filial-goiania">
+                        <div class="filial-text">Filial 1 - Goiânia</div>
+                    </div>
+                {% elif request.user|has_group:"Belem"%}
+                    <div id="fil-belem" class="filial filial-belem">
+                        <div class="filial-text">Filial 12 - Belém</div>
+                    </div>
+                {% elif request.user|has_group:"Sao Paulo"%}
+                    <div id="fil-saopaulo" class="filial filial-saopaulo">
+                        <div class="filial-text">Filial 13 - Sao Paulo</div>
+                    </div>
+            {% endif %}  
+            </div>      
+    {% endif %}
+<!-- Fim do Grupo Produção -->
+    
 {% endblock %}

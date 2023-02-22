@@ -1,0 +1,36 @@
+{% extends "base/base.html" %}
+{% load permission_tags %}
+{% load static %}
+
+{% block content %}
+    {% if user|has_role:'estoque'%}
+        <div class="card text-center">
+            <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-primary">Departamento Estoque</h5>
+            <p class="card-text">Olá, {{ request.user.username }}!</p>
+            <p class="card-text">Clique no botão abaixo, para acessar o sistema!</p>
+            <div>
+                <a href="./men25" class="btn btn-warning mt-2">Acessar</a>
+            </div>
+            </div>
+        </div>
+    {% endif %}
+
+    {% if user|has_role:'comercial'%}
+        <div class="panel panel-1"><p class="p-1">Painel de Controle</p></div>
+        <div class="panel panel-2">Painel 2</div>
+        <div class="panel panel-3">Painel 3</div>
+        <div class="panel panel-4">Calendário</div>
+        <div class="panel panel-5">Olá, {{ request.user.username }}! 🙂</div>
+        <div class="panel panel-6">Painel 6</div>
+        <div class="panel panel-7">Painel 7</div>
+        <div class="panel panel-8">Painel 8</div>
+        <div class="panel panel-9">Painel 9</div>
+        <div class="panel panel-10">Painel 10</div>
+        <div class="panel panel-11">Painel 11</div>
+        <div class="panel panel-12">Painel 12</div>
+        <div class="panel panel-13">Painel 13</div>
+    {% endif %}
+    
+{% endblock %}
+
