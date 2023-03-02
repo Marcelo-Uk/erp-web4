@@ -1,0 +1,132 @@
+{% extends "base/base-2.html" %}
+{% load permission_tags %}
+{% load auth_extras %}
+{% load static %}
+
+{% block content %}
+    <!-- Início do Grupo Estoque -->
+
+    
+    {% if request.user|has_group:"Estoque"%}
+        {% if request.user|has_group:"Mulher"%}
+            <!-- Painel Controle -->
+            <div class="panel panel-1" style="background-color: #ff7ad7; color: #92326d;">
+                <span class="fw-bold">Painel de Controle</span>
+                <span>Departamento Estoque/span>
+            </div>
+        {% elif request.user|has_group:"Homem"%}
+            <div class="panel panel-1" style="background-color: #7aafff; color: #325892;">
+                <span class="fw-bold">Painel de Controle</span>
+                <span>Departamento Estoque</span>
+            </div>
+        {% endif %}
+            <!-- Menus - 7 Botões por linha -->
+            <div class="panel panel-2">
+                <div class="panel-2-menu">
+                    <div><h1>Menu</div>
+                    <h3 class="text-danger">( Cadastro )</h3>
+                    <br>
+                    <a class="btn btn-primary" href="./menu25" role="button">Tipo Fornecedor</a>
+                    <a class="btn btn-primary" href="./menu759" role="button">Fornecedor</a>
+                    <a class="btn btn-primary" href="./menu695" role="button">Grupo Produto</a>
+                    <a class="btn btn-primary" href="./menu420" role="button">Tipos Produto</a>
+                    <a class="btn btn-primary" href="./menu462" role="button">Cor Produto</a>
+                    <hr>
+                    <a class="btn btn-primary" href="./menu542" role="button">Prod.Cad.Geral</a>
+                    <a class="btn btn-primary" href="./menu508" role="button">Armazenagem</a>
+                    <a class="btn btn-primary" href="./menu339" role="button">Matéria Prima</a>
+                    <a class="btn btn-primary" href="./menu370" role="button">Prod.Consult.Simples</a>
+                    <a class="btn btn-primary" href="./menu384" role="button">Cadastro Tanques</a>
+                    <hr>
+                    <a class="btn btn-primary" href="./menu474" role="button">ETQ Tanq.Cod.Barra</a>
+                    <a class="btn btn-primary" href="./menu484" role="button">Cad.Minimo.Maximo</a>
+                    <a class="btn btn-primary" href="./menu613" role="button">Local Entr.Estoque</a>
+                    <a class="btn btn-primary" href="./menu484" role="button">Transf.WMS</a>
+                    <a class="btn btn-primary" href="./menu613" role="button">Etiq.Tanques</a>
+                    <hr>
+                    <a class="btn btn-primary" href="./menu613" role="button">Cor Amost.Reetiquet.</a>
+                    <a class="btn btn-primary" href="./menu484" role="button">Subclasse Produtos</a>
+                    <a class="btn btn-primary" href="./menu613" role="button">Consulta Mat.Prima</a>
+                    <hr>
+                    <a class="btn btn-warning" href="/estoque" role="button">Voltar</a>
+                </div>
+            </div>
+
+            <!-- Calendário -->
+            <div class="panel panel-3">
+                <div class="wrapper">
+                    <div class="header">
+                      <p class="current-date"></p>
+                      <div class="icons">
+                        <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                        <span id="next" class="material-symbols-rounded">chevron_right</span>
+                      </div>
+                    </div class="header">
+                    <div class="calendar">
+                      <ul class="weeks">
+                        <li>Dom</li>
+                        <li>Seg</li>
+                        <li>Ter</li>
+                        <li>Qua</li>
+                        <li>Qui</li>
+                        <li>Sex</li>
+                        <li>Sáb</li>
+                      </ul>
+                      <ul class="days"></ul>
+                    </div>
+                  </div>
+            </div>
+
+            <!-- Boas-Vindas -->
+            <div class="panel panel-4">
+                    <span><hr></span>
+                {% if request.user|has_group:"Mulher"%}
+                    <span class="fs-1">Olá, {{ request.user.username }}! 🙂🌹</span>
+                {% elif request.user|has_group:"Homem"%}
+                    <span class="fs-1">Olá, {{ request.user.username }}! 😎</span> 
+                {% endif %}
+                <span><hr></span>
+                <div class="card text-center">
+                    {% if request.user|has_group:"Mulher"%}
+                        <div class="card-header">
+                            Seja bem-vinda!
+                        </div>
+                    {% elif request.user|has_group:"Homem"%}
+                        <div class="card-header">
+                            Você está ONLINE! ✅
+                        </div>
+                    {% endif %}
+
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text">
+                          Para voltar, use o botão abaixo:
+                        </p>
+                        <a href="/" class="btn btn-danger">Voltar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Hoje -->
+            <div class="panel panel-9">{{data}}</div>
+
+            <!-- Filial -->
+            <div class="panel panel-12">
+                {% if request.user|has_group:"Goiania"%}
+                    <div id="fil-goiania" class="filial filial-goiania">
+                        <div class="filial-text">Filial 1 - Goiânia</div>
+                    </div>
+                {% elif request.user|has_group:"Belem"%}
+                    <div id="fil-belem" class="filial filial-belem">
+                        <div class="filial-text">Filial 12 - Belém</div>
+                    </div>
+                {% elif request.user|has_group:"Sao Paulo"%}
+                    <div id="fil-saopaulo" class="filial filial-saopaulo">
+                        <div class="filial-text">Filial 13 - Sao Paulo</div>
+                    </div>
+            {% endif %}  
+            </div>      
+    {% endif %}
+<!-- Fim do Grupo Estoque -->
+    
+{% endblock %}

@@ -7,18 +7,56 @@
     <!-- Início do Grupo Comercial -->
     {% if request.user|has_group:"Comercial"%}
         {% if request.user|has_group:"Mulher"%}
-            <div class="panel panel-1" style="background-color: #ff7ad7; color: #92326d;">
+            <div class="panel panel-0001" style="background-color: #ff7ad7; color: #92326d;">
                 <span class="fw-bold">Painel de Controle</span>
                 <span>Departamento Comercial</span>
             </div>
         {% elif request.user|has_group:"Homem"%}
-            <div class="panel panel-1" style="background-color: #7aafff; color: #325892;">
+            <div class="panel panel-0001" style="background-color: #7aafff; color: #325892;">
                 <span class="fw-bold">Painel de Controle</span>
                 <span>Departamento Comercial</span>
             </div>
         {% endif %}
-            <div class="panel panel-2">Painel 2</div>
-            <div class="panel panel-3">
+            <div class="panel panel-0002">
+                <span><hr></span>
+                {% if request.user|has_group:"Mulher"%}
+                    <span class="fs-1">Olá, {{ request.user.username }}! 🙂🌹</span>
+                {% elif request.user|has_group:"Homem"%}
+                    <span class="fs-1">Olá, {{ request.user.username }}! 😎</span> 
+                {% endif %}
+                    <span><hr></span>
+                    <div class="card text-center">
+                        {% if request.user|has_group:"Mulher"%}
+                            <div class="card-header">
+                                Seja bem-vinda!
+                            </div>
+                        {% elif request.user|has_group:"Homem"%}
+                            <div class="card-header">
+                                Seja bem-vindo!
+                            </div>
+                        {% endif %}
+                        
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">
+                              Clique no link abaixo para acessar <br>
+                              o Sistema Web Leinertex.
+                            </p>
+                            <a href="#" class="btn btn-warning">Entrar</a>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- Data Hoje -->
+            <div class="panel panel-0003">{{data}}</div>
+
+            <!-- Paineis Middle -->
+            <div class="panel panel-0004">Painel 4</div>
+            <div class="panel panel-0005">Painel 5</div>
+            <div class="panel panel-0006">Painel 6</div>
+
+            <!-- Calendario -->
+            <div class="panel panel-0009">
                 <div class="wrapper">
                     <div class="header">
                       <p class="current-date"></p>
@@ -41,43 +79,9 @@
                     </div>
                   </div>
             </div>
-            <div class="panel panel-4">
-                    <span><hr></span>
-                {% if request.user|has_group:"Mulher"%}
-                    <span class="fs-1">Olá, {{ request.user.username }}! 🙂🌹</span>
-                {% elif request.user|has_group:"Homem"%}
-                    <span class="fs-1">Olá, {{ request.user.username }}! 😎</span> 
-                {% endif %}
-                    <span><hr></span>
-                    <div class="card text-center">
-                        {% if request.user|has_group:"Mulher"%}
-                            <div class="card-header">
-                                Seja bem-vinda!
-                            </div>
-                        {% elif request.user|has_group:"Homem"%}
-                            <div class="card-header">
-                                Seja bem-vindo!
-                            </div>
-                        {% endif %}
 
-                        <div class="card-body">
-                            <h5 class="card-title"></h5>
-                            <p class="card-text">
-                              Clique no link abaixo para acessar <br>
-                              o Sistema Web Leinertex.
-                            </p>
-                            <a href="#" class="btn btn-warning">Entrar</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="panel panel-5">Painel 5</div>
-            <div class="panel panel-6">Painel 6</div>
-            <div class="panel panel-7">Painel 7</div>
-            <div class="panel panel-8">Painel 8</div>
-            <div class="panel panel-9">{{data}}</div>
-            <div class="panel panel-10">Painel 10</div>
-            <div class="panel panel-11">Painel 11</div>
-            <div class="panel panel-12">
+            <!-- Filial -->
+            <div class="panel panel-0010">
                 {% if request.user|has_group:"Goiania"%}
                     <div id="fil-goiania" class="filial filial-goiania">
                         <div class="filial-text">Filial 1 - Goiânia</div>
@@ -91,25 +95,63 @@
                         <div class="filial-text">Filial 13 - Sao Paulo</div>
                     </div>
             {% endif %}  
-            </div>      
+            </div>
     {% endif %}
 <!-- Fim do Grupo Comercial -->
 
-<!-- Início do Grupo Produção -->
-    {% if request.user|has_group:"Producao"%}
+<!-- Início do Grupo Estoque -->
+    {% if request.user|has_group:"Estoque"%}
         {% if request.user|has_group:"Mulher"%}
-            <div class="panel panel-1" style="background-color: #ff7ad7; color: #92326d;">
+            <div class="panel panel-0001" style="background-color: #ff7ad7; color: #92326d;">
                 <span class="fw-bold">Painel de Controle</span>
-                <span>Departamento Produção</span>
+                <span>Departamento Estoque</span>
             </div>
         {% elif request.user|has_group:"Homem"%}
-            <div class="panel panel-1" style="background-color: #7aafff; color: #325892;">
+            <div class="panel panel-0001" style="background-color: #7aafff; color: #325892;">
                 <span class="fw-bold">Painel de Controle</span>
-                <span>Departamento Produção</span>
+                <span>Departamento Estoque</span>
             </div>
         {% endif %}
-            <div class="panel panel-2">Painel 2</div>
-            <div class="panel panel-3">
+            <div class="panel panel-0002">
+                <span><hr></span>
+                {% if request.user|has_group:"Mulher"%}
+                    <span class="fs-1">Olá, {{ request.user.username }}! 🙂🌹</span>
+                {% elif request.user|has_group:"Homem"%}
+                    <span class="fs-1">Olá, {{ request.user.username }}! 😎</span> 
+                {% endif %}
+                    <span><hr></span>
+                    <div class="card text-center">
+                        {% if request.user|has_group:"Mulher"%}
+                            <div class="card-header">
+                                Seja bem-vinda!
+                            </div>
+                        {% elif request.user|has_group:"Homem"%}
+                            <div class="card-header">
+                                Seja bem-vindo!
+                            </div>
+                        {% endif %}
+                        
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">
+                              Clique no link abaixo para acessar <br>
+                              o Sistema Web Leinertex.
+                            </p>
+                            <a href="/estoque" class="btn btn-warning">Entrar</a>
+                        </div>
+                    </div>
+            </div>
+
+            <!-- Data Hoje -->
+            <div class="panel panel-0003">{{data}}</div>
+
+            <!-- Paineis Middle -->
+            <div class="panel panel-0004">Painel 4</div>
+            <div class="panel panel-0005">Painel 5</div>
+            <div class="panel panel-0006">Painel 6</div>
+
+            <!-- Calendario -->
+            <div class="panel panel-0009">
                 <div class="wrapper">
                     <div class="header">
                       <p class="current-date"></p>
@@ -132,43 +174,9 @@
                     </div>
                   </div>
             </div>
-            <div class="panel panel-4">
-                    <span><hr></span>
-                {% if request.user|has_group:"Mulher"%}
-                    <span class="fs-1">Olá, {{ request.user.username }}! 🙂🌹</span>
-                {% elif request.user|has_group:"Homem"%}
-                    <span class="fs-1">Olá, {{ request.user.username }}! 😎</span> 
-                {% endif %}
-                    <span><hr></span>
-                    <div class="card text-center">
-                        {% if request.user|has_group:"Mulher"%}
-                            <div class="card-header">
-                                Seja bem-vinda!
-                            </div>
-                        {% elif request.user|has_group:"Homem"%}
-                            <div class="card-header">
-                                Seja bem-vindo!
-                            </div>
-                        {% endif %}
 
-                        <div class="card-body">
-                            <h5 class="card-title"></h5>
-                            <p class="card-text">
-                              Clique no link abaixo para acessar <br>
-                              o Sistema Web Leinertex.
-                            </p>
-                            <a href="#" class="btn btn-warning">Entrar</a>
-                        </div>
-                    </div>
-            </div>
-            <div class="panel panel-5">Painel 5</div>
-            <div class="panel panel-6">Painel 6</div>
-            <div class="panel panel-7">Painel 7</div>
-            <div class="panel panel-8">Painel 8</div>
-            <div class="panel panel-9">{{data}}</div>
-            <div class="panel panel-10">Painel 10</div>
-            <div class="panel panel-11">Painel 11</div>
-            <div class="panel panel-12">
+            <!-- Filial -->
+            <div class="panel panel-0010">
                 {% if request.user|has_group:"Goiania"%}
                     <div id="fil-goiania" class="filial filial-goiania">
                         <div class="filial-text">Filial 1 - Goiânia</div>
@@ -182,8 +190,8 @@
                         <div class="filial-text">Filial 13 - Sao Paulo</div>
                     </div>
             {% endif %}  
-            </div>      
+            </div>
     {% endif %}
-<!-- Fim do Grupo Produção -->
+<!-- Fim do Grupo Estoque -->
     
 {% endblock %}

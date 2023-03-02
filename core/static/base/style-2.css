@@ -54,11 +54,11 @@ a {
 .grid-container {
     display: grid;
     grid-template-areas:
-        "item1 item1 item2 item2 item2 item2 item3 item3"
-        "item4 item4 item2 item2 item2 item2 item3 item3"
-        "item4 item4 item5 item5 item6 item6 item3 item3"
-        "item4 item4 item7 item7 item8 item8 item3 item3"
-        "item9 item9 item10 item10 item11 item11 item12 item12";
+      "item1 item1 item2 item2 item2 item2 item2 item2 item3"
+      "item4 item4 item2 item2 item2 item2 item2 item2 item3"
+      "item4 item4 item2 item2 item2 item2 item2 item2 item3"
+      "item4 item4 item2 item2 item2 item2 item2 item2 item3"
+      "item9 item9 item2 item2 item2 item2 item2 item2 item12";
     gap: 10px;
     margin-top: 100px;
     margin-bottom: 50px;
@@ -76,6 +76,7 @@ a {
 
 }
   
+/* Painel Controle Text */
 .panel-1 {
     grid-area: item1;
     font-size: 22px;
@@ -84,24 +85,30 @@ a {
     align-items: center;
     flex-direction: column;
 }
-  
+ 
+/* Menus */
 .panel-2 {
     grid-area: item2;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    text-align: center;
 }
-    
+
+.panel-2-menu {
+  
+}
+
+/* Calendário */
 .panel-3 {
     grid-area: item3;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #9B59B6;
 }
-  
+ 
+/* Boas-Vindas */
 .panel-4 {
     grid-area: item4;
     font-size: 22px;
@@ -110,48 +117,8 @@ a {
     align-items: center;
     flex-direction: column;
 }
-  
-.panel-5 {
-    grid-area: item5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #e5f6ff;
-    color: #2b70ff;
-}
-  
-.panel-6 {
-    grid-area: item6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #f6f3ff;
-    color: #5d48b8;
 
-}
-  
-.panel-7 {
-    grid-area: item7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #e2f6e9;
-    color: #358e51;
-}
-  
-.panel-8 {
-    grid-area: item8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #fff0e9;
-    color: #ff5228;
-}
-  
+/* Data Hoje */
 .panel-9 {
     grid-area: item9;
     display: flex;
@@ -159,64 +126,61 @@ a {
     align-items: center;
     flex-direction: column;
     font-size: 32px;
+    color: #0850ad;
 }
-  
-.panel-10 {
-    grid-area: item10;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-      
-.panel-11 {
-    grid-area: item11;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-  
+
+/* Filial Inicio */
 .panel-12 {
     grid-area: item12;
-}
-
-.fil-goiania {
     color: white;
     font-size: 22px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../imgs/filial-1.jpg');
-    background-size: cover;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
 }
 
-.fil-belem {
-    color: white;
-    font-size: 22px;
+.filial {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../imgs/filial-2.jpg');
-    background-size: cover;
+    flex-direction: column;
+    border-radius: 10px;
 }
 
-.fil-saopaulo {
+.filial-text {
     color: white;
     font-size: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url('../imgs/filial-3.jpg');
-    background-size: cover;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
 }
+
+.filial-goiania {
+    background-image: url('../imgs/filial-1.jpg');
+}
+
+.filial-belem {
+    background-image: url('../imgs/filial-2.jpg');
+}
+
+.filial-saopaulo {
+    background-image: url('../imgs/filial-3.jpg');
+}
+/* Filial Fim */
 
 /* Calendário */
 .wrapper{
-    width: 450px;
+    width: 350px;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
   }
   .wrapper .header{
     display: flex;
@@ -248,6 +212,8 @@ a {
   .header .current-date{
     font-size: 1.45rem;
     font-weight: 500;
+    color: #0850ad;
+    margin-left: 25px;
   }
   .calendar{
     padding: 20px;
@@ -294,7 +260,7 @@ a {
     transform: translate(-50%, -50%);
   }
   .days li.active::before{
-    background: #9B59B6;
+    background: #0850ad;
   }
   .days li:not(.active):hover::before{
     background: #f2f2f2;

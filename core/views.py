@@ -12,7 +12,7 @@ def home(request):
         locale.setlocale(locale.LC_TIME, 'pt_BR.utf-8')
         data_hoje = datetime.now()
         data = data_hoje.strftime('%d de %B de %Y ').capitalize()
-        context= {'data': data}
+        context={'data': data}
         return render(request,'core/home.html', context )
     else:
         return render(request,'accounts/' )
