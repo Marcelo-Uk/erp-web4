@@ -8,9 +8,9 @@ from datetime import datetime
 def estoque(request):
     if request.user.is_authenticated:
         
-        locale.setlocale(locale.LC_TIME, 'pt_BR.utf-8')
+        locale.setlocale(locale.LC_TIME, 'pt_BR')
         data_hoje = datetime.now()
-        data = data_hoje.strftime('%d de %B de %Y ').capitalize()
+        data = data_hoje.strftime('%d de %B de %Y ')
         context={'data': data}
         return render(request,'estoque/home.html', context )
     else:
@@ -20,9 +20,9 @@ def estoque(request):
 def cadastro(request):
     if request.user.is_authenticated:
         
-        locale.setlocale(locale.LC_TIME, 'pt_BR.utf-8')
+        locale.setlocale(locale.LC_TIME, 'pt_BR')
         data_hoje = datetime.now()
-        data = data_hoje.strftime('%d de %B de %Y ').capitalize()
+        data = data_hoje.strftime('%d de %B de %Y ')
         context={'data': data}
         return render(request,'estoque/cadastro.html', context )
     else:
@@ -32,9 +32,9 @@ def cadastro(request):
 def ferramentaria(request):
     if request.user.is_authenticated:
         
-        locale.setlocale(locale.LC_TIME, 'pt_BR.utf-8')
+        locale.setlocale(locale.LC_TIME, 'pt_BR')
         data_hoje = datetime.now()
-        data = data_hoje.strftime('%d de %B de %Y ').capitalize()
+        data = data_hoje.strftime('%d de %B de %Y ')
         context={'data': data}
         return render(request,'estoque/ferramentaria.html', context )
     else:
@@ -44,9 +44,9 @@ def ferramentaria(request):
 def segregados(request):
     if request.user.is_authenticated:
         
-        locale.setlocale(locale.LC_TIME, 'pt_BR.utf-8')
+        locale.setlocale(locale.LC_TIME, 'pt_BR')
         data_hoje = datetime.now()
-        data = data_hoje.strftime('%d de %B de %Y ').capitalize()
+        data = data_hoje.strftime('%d de %B de %Y ')
         context={'data': data}
         return render(request,'estoque/segregados.html', context )
     else:
@@ -56,9 +56,9 @@ def segregados(request):
 def inventario(request):
     if request.user.is_authenticated:
         
-        locale.setlocale(locale.LC_TIME, 'pt_BR.utf-8')
+        locale.setlocale(locale.LC_TIME, 'pt_BR')
         data_hoje = datetime.now()
-        data = data_hoje.strftime('%d de %B de %Y ').capitalize()
+        data = data_hoje.strftime('%d de %B de %Y ')
         context={'data': data}
         return render(request,'estoque/inventario.html', context )
     else:
@@ -68,9 +68,9 @@ def inventario(request):
 def movestoque(request):
     if request.user.is_authenticated:
         
-        locale.setlocale(locale.LC_TIME, 'pt_BR.utf-8')
+        locale.setlocale(locale.LC_TIME, 'pt_BR')
         data_hoje = datetime.now()
-        data = data_hoje.strftime('%d de %B de %Y ').capitalize()
+        data = data_hoje.strftime('%d de %B de %Y ')
         context={'data': data}
         return render(request,'estoque/movestoque.html', context )
     else:
@@ -80,9 +80,9 @@ def movestoque(request):
 def precos(request):
     if request.user.is_authenticated:
         
-        locale.setlocale(locale.LC_TIME, 'pt_BR.utf-8')
+        locale.setlocale(locale.LC_TIME, 'pt_BR')
         data_hoje = datetime.now()
-        data = data_hoje.strftime('%d de %B de %Y ').capitalize()
+        data = data_hoje.strftime('%d de %B de %Y ')
         context={'data': data}
         return render(request,'estoque/precos.html', context )
     else:
@@ -92,9 +92,9 @@ def precos(request):
 def relatorios(request):
     if request.user.is_authenticated:
         
-        locale.setlocale(locale.LC_TIME, 'pt_BR.utf-8')
+        locale.setlocale(locale.LC_TIME, 'pt_BR')
         data_hoje = datetime.now()
-        data = data_hoje.strftime('%d de %B de %Y ').capitalize()
+        data = data_hoje.strftime('%d de %B de %Y ')
         context={'data': data}
         return render(request,'estoque/relatorios.html', context )
     else:
@@ -104,9 +104,9 @@ def relatorios(request):
 def leitesteira(request):
     if request.user.is_authenticated:
         
-        locale.setlocale(locale.LC_TIME, 'pt_BR.utf-8')
+        locale.setlocale(locale.LC_TIME, 'pt_BR')
         data_hoje = datetime.now()
-        data = data_hoje.strftime('%d de %B de %Y ').capitalize()
+        data = data_hoje.strftime('%d de %B de %Y ')
         context={'data': data}
         return render(request,'estoque/leitesteira.html', context )
     else:
@@ -116,9 +116,9 @@ def leitesteira(request):
 def leitdocasaida(request):
     if request.user.is_authenticated:
         
-        locale.setlocale(locale.LC_TIME, 'pt_BR.utf-8')
+        locale.setlocale(locale.LC_TIME, 'pt_BR')
         data_hoje = datetime.now()
-        data = data_hoje.strftime('%d de %B de %Y ').capitalize()
+        data = data_hoje.strftime('%d de %B de %Y ')
         context={'data': data}
         return render(request,'estoque/leitdocasaida.html', context )
     else:
@@ -128,9 +128,9 @@ def leitdocasaida(request):
 def aplyromaneioid(request):
     if request.user.is_authenticated:
         
-        locale.setlocale(locale.LC_TIME, 'pt_BR.utf-8')
+        locale.setlocale(locale.LC_TIME, 'pt_BR')
         data_hoje = datetime.now()
-        data = data_hoje.strftime('%d de %B de %Y ').capitalize()
+        data = data_hoje.strftime('%d de %B de %Y ')
         context={'data': data}
         return render(request,'estoque/aplyromaneioid.html', context )
     else:
@@ -140,9 +140,9 @@ def aplyromaneioid(request):
 def geraprodleitor(request):
     if request.user.is_authenticated:
         
-        locale.setlocale(locale.LC_TIME, 'pt_BR.utf-8')
+        locale.setlocale(locale.LC_TIME, 'pt_BR')
         data_hoje = datetime.now()
-        data = data_hoje.strftime('%d de %B de %Y ').capitalize()
+        data = data_hoje.strftime('%d de %B de %Y ')
         context={'data': data}
         return render(request,'estoque/geraprodleitor.html', context )
     else:
@@ -152,9 +152,9 @@ def geraprodleitor(request):
 def verifnotas(request):
     if request.user.is_authenticated:
         
-        locale.setlocale(locale.LC_TIME, 'pt_BR.utf-8')
+        locale.setlocale(locale.LC_TIME, 'pt_BR')
         data_hoje = datetime.now()
-        data = data_hoje.strftime('%d de %B de %Y ').capitalize()
+        data = data_hoje.strftime('%d de %B de %Y ')
         context={'data': data}
         return render(request,'estoque/verifnotas.html', context )
     else:
@@ -164,9 +164,9 @@ def verifnotas(request):
 def tesembalprod(request):
     if request.user.is_authenticated:
         
-        locale.setlocale(locale.LC_TIME, 'pt_BR.utf-8')
+        locale.setlocale(locale.LC_TIME, 'pt_BR')
         data_hoje = datetime.now()
-        data = data_hoje.strftime('%d de %B de %Y ').capitalize()
+        data = data_hoje.strftime('%d de %B de %Y ')
         context={'data': data}
         return render(request,'estoque/tesembalprod.html', context )
     else:

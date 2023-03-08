@@ -104,15 +104,42 @@ body {
     color: #0850ad;
 }
 
-/* Paineis Middle Inicio */
-  
+/* Paineis Aniversariantes Inicio */
 .panel-0004 {
     grid-area: p0004;
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+    font-size: 22px;
+}
+
+.panel-0004 h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.panel-0004 ul {
+  list-style: none;
+  padding: 0;
+}
+
+.panel-0004 li {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.panel-0004 p {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    align-items: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
+    font-size: 22px;
+  }
+/* Paineis Aniversariantes Fim */
 
 .panel-0005 {
     grid-area: p0005;
