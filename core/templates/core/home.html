@@ -50,8 +50,21 @@
             <!-- Data Hoje -->
             <div class="panel panel-0003">{{data}}</div>
 
-            <!-- Paineis Middle -->
-            <div class="panel panel-0004">Painel 4</div>
+            <!-- Painel Aniversariantes -->
+            <div class="panel panel-0004">
+                <div class="birthday-container">
+                    <p>🍰🎁</p>
+                    <h2>Aniversariantes do Mês</h2>
+                    <div class="birthday-list">
+                        <ul>
+                            {% for anviersariante in aniversariantes %}
+                                <li>{{ aniversariante.data_nascimento|date:"d/m" }} - {{ aniversariante.nome }} ({{ aniversariante.departamento }})</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <div class="panel panel-0005">Painel 5</div>
             <div class="panel panel-0006">Painel 6</div>
 
