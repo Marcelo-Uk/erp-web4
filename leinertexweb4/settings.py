@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'leinertex-alpha-4',
         'USER': 'postgres',
-        'PASSWORD': '12345',
+        'PASSWORD': 'db12345',
         'HOST': 'localhost',
         'PORT': '5432',
     }
